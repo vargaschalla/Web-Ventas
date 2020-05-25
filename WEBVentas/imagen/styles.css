@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: cooper black;
+	color: black;
+}
+div{
+	
+}
+body{
+	background-color: rgba(0,0,0,0.15);
+}
+.contenedor-flexbox{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+.caja{
+	flex: 20%;
+	margin: 5px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px black;
+	border: 1px solid green;
+}
+.caja img{
+	width: 120px;
+}
+.caja img:hover{
+	animation-duration: 2s;
+	animation-name: productos
+	/*transform: scale(1.5,1.5) rotate(30deg);*/
+}
+.menu{
+	display: flex;
+	justify-content: space-between;
+}
+.menu .logo{
+	margin-top: 10px;
+	margin-left: 10px;
+	animation-duration: 3s;
+	animation-name: logo;
+}
+.items{
+	margin-right: 10px;
+}
+
+.menu .items a{
+	text-decoration: none;
+	border: solid 1px green;
+	padding: 20px;
+	border-radius: 20px;
+}
+.menu .items a:hover{
+	/*background-color: green;
+	color: white;*/
+	animation-duration: 1s;
+	animation-name: menu;
+}
+@keyframes logo {
+	from {
+		transform: translate(-200px,-10px) ;
+	}
+	to{
+		transform: translate(0px,0px);
+	}
+}
+@keyframes productos{
+	from {
+		transform: scale(0.9,0.9) rotate(0deg);
+	}
+	to{
+		transform: scale(1.5,1.5) rotate(360deg);
+	}
+}
+@keyframes menu{
+	from {
+		transform: scale(0.9,0.9) rotate(0deg);
+	}
+	to{
+		background-color: green;
+		color: white;
+	}
+}
+@media (max-width: 600px) {
+	.menu{
+		display: block;
+	}
+	.menu a{
+		display: block;
+	}
+}
+@media (max-width: 768px) {
+	.caja {
+		flex: 40%;
+	}
+}
+@media (max-width: 480px) {
+	.caja {
+		flex: 80%;
+	}
+}
